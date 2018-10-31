@@ -8,10 +8,11 @@
       </li>
     </ul>
     <form class="nav-item form-inline">
-      <input [(ngModel)]="searchQuery" class="form-control mr-sm-2" type="search" title="Only search videos bro" placeholder="Type some cool stuff"
+      <input name="searchQuery" [(ngModel)]="searchQuery" class="form-control mr-sm-2" type="search" title="Only search videos bro" placeholder="Type some cool stuff"
         aria-label="Search">
       <button (click)="searchVideos()" class="btn btn-outline-success my-2 my-sm-0" title="Click me if you are ready to go"
         type="submit">Search</button>
     </form>
   </div>
 </nav>
+<app-home-content></app-home-content>

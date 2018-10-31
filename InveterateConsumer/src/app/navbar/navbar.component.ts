@@ -14,4 +14,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  searchVideos() {
+    console.log(this.searchQuery)
+  }
+
 }
