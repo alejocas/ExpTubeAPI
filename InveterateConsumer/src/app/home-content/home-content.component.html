@@ -1,3 +1,14 @@
-<div class="content">
-  Componente de contenido funcionando :v
+<div *ngIf="active" class="content">
+  Usted está buscando: {{ videoSearched }}
+  {{}}
+</div>
+<div *ngIf="!active" class="content">
+  <p>
+    <strong>Puede buscar videos que serán traídos desde donde traen los mejores videos del mundo</strong>
+  </p>
+  <p>
+    <em>
+      <q>Pues, pues, pues, no un video bonito bonito, sino bonito hermoso ¡papá!</q>
+    </em>
+  </p>
 </div>

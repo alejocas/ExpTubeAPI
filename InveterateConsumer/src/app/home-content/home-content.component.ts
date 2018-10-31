@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { NavbarComponent, searchQuery } from "../navbar/navbar.component";
-
 @Component({
   selector: 'app-home-content',
   templateUrl: './home-content.component.html',
@@ -9,7 +7,9 @@ import { NavbarComponent, searchQuery } from "../navbar/navbar.component";
 })
 export class HomeContentComponent implements OnInit {
 
-  @Input() public videoSearched: String = searchQuery
+  @Input() public active: Boolean;
+  @Input() public collectionOfVideos: any;
+  @Input() public videoSearched: String;
 
   constructor() { }
 

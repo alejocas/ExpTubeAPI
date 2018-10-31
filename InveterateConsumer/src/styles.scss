@@ -4,3 +4,8 @@
 $primary-color: #1abc9c;
 $primary-color-light: #a1cb00;
 $primary-color-dark: #333333;
+
+body {
+    background-color: $primary-color-dark;
+    color: $primary-color-light;
+}
