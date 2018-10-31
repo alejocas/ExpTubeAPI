@@ -14,7 +14,8 @@ export class YoutubeService {
   constructor(private http: HttpClient) { }
 
   requestVideos(query: String): Observable<any> {
-    const requestUri = `${this.apiUrl}/part=snippet&maxResults=${this.maxNumberOfVideos}&q=${query}&type=${this.typeOfContentSearched}&key=${this.youtubeApiKey}`;
+    // const requestUri = `${this.apiUrl}/part=snippet&maxResults=${this.maxNumberOfVideos}&q=${query}&type=${this.typeOfContentSearched}&key=${this.youtubeApiKey}`;
+    const requestUri = `${this.apiUrl}/part=snippet&maxResults=${this.maxNumberOfVideos}&q=${query}&key=${this.youtubeApiKey}`;
     return this.http.get<any>(requestUri);
   }
 }
