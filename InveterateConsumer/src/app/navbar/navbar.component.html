@@ -4,13 +4,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-          <a class="nav-link" href="#">Experimentality</a>
+        <a class="nav-link" href="#">Experimentality</a>
       </li>
     </ul>
     <form class="nav-item form-inline">
-      <input class="form-control mr-sm-2" type="search" title="Only search videos bro" placeholder="Type some cool stuff"
+      <input [(ngModel)]="searchQuery" class="form-control mr-sm-2" type="search" title="Only search videos bro" placeholder="Type some cool stuff"
         aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" title="Click me if you are ready to go" type="submit">Search</button>
+      <button (click)="searchVideos()" class="btn btn-outline-success my-2 my-sm-0" title="Click me if you are ready to go"
+        type="submit">Search</button>
     </form>
   </div>
 </nav>
