@@ -20,8 +20,8 @@ export class NavbarComponent implements OnInit {
 
   searchVideos() {
     this.activeSearch = true;
-    this.youtubeConsumer.requestVideos(this.searchQuery).subscribe( response =>{
-      this.resultingVideos = response.items
+    this.youtubeConsumer.requestVideos(this.searchQuery).subscribe(response => {
+      this.resultingVideos = response.items;
     });
   }
 

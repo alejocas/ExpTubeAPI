@@ -6,12 +6,14 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeContentComponent } from './home-content/home-content.component';
+import { VideoContainerComponent } from './video-container/video-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeContentComponent
+    HomeContentComponent,
+    VideoContainerComponent
   ],
   imports: [
     BrowserModule,

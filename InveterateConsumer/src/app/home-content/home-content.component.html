@@ -1,10 +1,20 @@
 <div *ngIf="active" class="content">
-  Usted está buscando: {{ videoSearched }}
-  {{ collectionOfVideos }}
+  <h3><em>Primeros 6 resultados para: {{ videoSearched }}</em></h3>
+  <!-- https://pbs.twimg.com/profile_images/1134660580/Puerco_Potter_400x400.jpg -->
+  <div class="card-deck">
+    <div class="card" *ngFor="let video of collectionOfVideos" (click)="playVideo(video.id.videoId, video.snippet.title, video.snippet.description)">
+      <img class="card-img-top" [src]="video.snippet.thumbnails.default.url" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ video.snippet.title }}</h5>
+        <p class="card-text" [title]="video.snippet.description">{{ video.snippet.description }}</p>
+        <p class="card-text"><small class="text-muted">{{ video.snippet.channelTitle }}</small></p>
+      </div>
+    </div>
+  </div>
 </div>
 <div *ngIf="!active" class="content">
   <p>
-    <strong>Puede buscar videos que serán traídos desde donde traen los mejores videos del mundo</strong>
+    <strong>Puede buscar videos que serán traídos desde donde traen los mejores videos del mundo.</strong>
   </p>
   <p>
     <em>
