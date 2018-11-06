@@ -13,7 +13,7 @@ export class HomeContentComponent implements OnInit {
   public activeTitle: String;
   public activeDescription: String;
   public activeVideoUrl: String;
-  public activeVideoContainer: Boolean;
+  public enableVideoContainer: Boolean;
 
   constructor() { }
 
@@ -24,6 +24,6 @@ export class HomeContentComponent implements OnInit {
     this.activeTitle = title;
     this.activeDescription = description;
     this.activeVideoUrl = `http://www.youtube.com/embed/${id}?enablejsapi=1`;
-    console.log(this.activeVideoUrl);
+    this.enableVideoContainer = true;
   }
 }

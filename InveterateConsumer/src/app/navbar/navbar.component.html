@@ -8,7 +8,7 @@
       </li>
     </ul>
     <form class="nav-item form-inline">
-      <input name="searchQuery" [(ngModel)]="searchQuery" class="form-control mr-sm-2" type="search" title="Solo puedes buscar videos hermano" placeholder="Busca algo bonito"
+      <input name="searchBarQuery" [(ngModel)]="searchBarQuery" class="form-control mr-sm-2" type="search" title="Solo puedes buscar videos hermano" placeholder="Busca algo bonito"
         aria-label="Search">
       <button (click)="searchVideos()" class="btn btn-outline-success my-2 my-sm-0" title="Cliqueame si estás listo para buscar"
         type="submit">Buscar</button>
@@ -16,4 +16,4 @@
   </div>
 </nav>
 <br>
-<app-home-content [videoSearched]="searchQuery" [active]="activeSearch" [collectionOfVideos]="resultingVideos"></app-home-content>
+<app-home-content [videoSearched]="querySearched" [active]="enableContent" [collectionOfVideos]="resultingVideos"></app-home-content>

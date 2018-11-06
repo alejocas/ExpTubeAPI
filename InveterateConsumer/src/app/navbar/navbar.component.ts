@@ -9,8 +9,9 @@ import { YoutubeService } from "../services/youtube.service";
 })
 export class NavbarComponent implements OnInit {
 
-  public searchQuery: String = "";
-  public activeSearch: Boolean = false;
+  public searchBarQuery: String = "";
+  public querySearched: String = "";
+  public enableContent: Boolean = false;
   public resultingVideos: any = [];
 
   constructor(private youtubeConsumer: YoutubeService) { }
@@ -19,10 +20,11 @@ export class NavbarComponent implements OnInit {
   }
 
   searchVideos() {
-    this.activeSearch = true;
-    this.youtubeConsumer.requestVideos(this.searchQuery).subscribe(response => {
+    this.enableContent = true;
+    this.youtubeConsumer.requestVideos(this.searchBarQuery).subscribe(response => {
       this.resultingVideos = response.items;
     });
+    this.querySearched = this.searchBarQuery;
   }
 
 }
