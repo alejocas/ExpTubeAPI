@@ -19,6 +19,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * This method is responsible for using the YouTube service to bring videos 
+   * according to the search determined in the search bar.
+   */
   searchVideos() {
     this.enableContent = true;
     this.youtubeConsumer.requestVideos(this.searchBarQuery).subscribe(response => {

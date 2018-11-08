@@ -22,6 +22,14 @@ export class HomeContentComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * This method is responsible for enabling the component where the video 
+   * will be displayed and for that it makes use of the video ID to build 
+   * the URL that will bring the video from the Google servers
+   * @param id Video id
+   * @param title Video title
+   * @param description Video description
+   */
   playVideo(id, title, description) {
     this.activeTitle = title;
     this.activeDescription = description;
