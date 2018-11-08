@@ -1,0 +1,17 @@
+@import "../../styles.scss";
+
+@media only screen and (max-width: 600px) {
+    iframe {
+        border: 2px solid $primary-color-light;
+        border-radius: 5px;
+        height:50vh;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    iframe {
+        border: 2px solid $primary-color-light;
+        border-radius: 5px;
+        height:60vh;
+    }
+}

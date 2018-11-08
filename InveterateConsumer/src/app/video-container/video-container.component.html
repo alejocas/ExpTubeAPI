@@ -1,3 +1,4 @@
-<video *ngIf="active">
-  <source [src]="activeVideoUrl" >
-</video>
+<div *ngIf="enable">
+  <iframe width="90%" [src]="activeVideoUrl">
+  </iframe>
+</div>

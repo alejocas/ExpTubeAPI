@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class VideoContainerComponent implements OnInit {
 
-  @Input() public active: Boolean = false;
+  @Input() public enable: Boolean = false;
   @Input() public activeVideoUrl: String = "";
   constructor() { }
 

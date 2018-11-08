@@ -1,6 +1,7 @@
 <div *ngIf="active" class="content">
   <h3><em>Primeros 6 resultados para: {{ videoSearched }}</em></h3>
-  <!-- https://pbs.twimg.com/profile_images/1134660580/Puerco_Potter_400x400.jpg -->
+  <app-video-container [enable]="enableVideoContainer" [activeVideoUrl]="sanitizedUrl"></app-video-container>
+  <br>
   <div class="card-deck">
     <div class="card" *ngFor="let video of collectionOfVideos" (click)="playVideo(video.id.videoId, video.snippet.title, video.snippet.description)">
       <img class="card-img-top" [src]="video.snippet.thumbnails.default.url" alt="Card image cap">
@@ -11,7 +12,6 @@
       </div>
     </div>
   </div>
-  <app-video-container [active]="enableVideoContainer" [activeVideoUrl]="activeVideoUrl"></app-video-container>
 </div>
 <div *ngIf="!active" class="content">
   <p>

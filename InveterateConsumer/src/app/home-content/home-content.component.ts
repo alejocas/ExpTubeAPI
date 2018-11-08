@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-home-content',
@@ -12,10 +13,11 @@ export class HomeContentComponent implements OnInit {
   @Input() public videoSearched: String;
   public activeTitle: String;
   public activeDescription: String;
-  public activeVideoUrl: String;
+  public activeVideoUrl: string;
   public enableVideoContainer: Boolean;
+  public sanitizedUrl: any;
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
   }
@@ -24,6 +26,8 @@ export class HomeContentComponent implements OnInit {
     this.activeTitle = title;
     this.activeDescription = description;
     this.activeVideoUrl = `http://www.youtube.com/embed/${id}?enablejsapi=1`;
+    this.sanitizedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.activeVideoUrl);
     this.enableVideoContainer = true;
+    console.log(`Trying to play: ${title}`)
   }
 }

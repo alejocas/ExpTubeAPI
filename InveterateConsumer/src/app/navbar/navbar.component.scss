@@ -1,13 +1,24 @@
 @import "../../styles.scss";
 
 nav {
-    //background-color: $primary-color-dark;
     background: linear-gradient(to bottom right, $primary-color-dark, $primary-color);
 }
 
 .navbar-light .navbar-nav .nav-link {
     color: $primary-color-light;
     font-family: 'Comfortaa', cursive;
+}
+
+@media only screen and (max-width: 575) {
+    nav.desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 576){
+    nav.desktop {
+        display: flex;
+    }
 }
 
 .btn-outline-success {
